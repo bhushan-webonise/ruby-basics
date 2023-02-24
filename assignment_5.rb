@@ -11,3 +11,4 @@ puts b
 #Capitalise string 1
 c=str1.upcase
 puts c
+
