@@ -1,15 +1,12 @@
-def kaprekar(num)
-  square = num ** 2
-  sum = 0
-  while square != 0 do
-    sum += square % 10
-    square /= 10
-  end
-  if sum == num
-    puts "kaprekar"
-  else
-    puts "not kaprekar"
-  end
+def kaprekar?(k)
+  no_of_digits = k.to_s.size
+  square = (k * k).to_s
+
+  second_half = square[-no_of_digits..-1]
+  first_half = square.size.even? ? square[0..no_of_digits - 1] : square[0..no_of_digits - 2]
+
+  k == first_half.to_i + second_half.to_i
 end
 
-kaprekar(9)
+puts kaprekar?(297)
+
