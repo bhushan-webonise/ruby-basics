@@ -1,11 +1,14 @@
 def sum_of_cubes(a,b)
-  i=a
+  diff=b-a+1
   sum=0
-  while i<=b
-    sum=sum + (i*i*i)
-    i =i+1
+  diff.times do |i|
+    cube=a*a*a
+    sum=sum+cube
+    a=a+1
   end
   sum
 end
 
-puts sum_of_cubes(1,3)
+total_sum=sum_of_cubes(1,3)
+puts total_sum
+
